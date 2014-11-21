@@ -1,8 +1,10 @@
 <?php
 
-$a = 100;
+$a = 2;
 
 do { 
-echo "$a\n";
-$a -= 5;
-} while ($a >= "-10");
+	echo "$a\n";
+	// reasign $a
+	// $a = ($a * $a)
+	$a *= $a;
+} while ($a < 1000000 );
