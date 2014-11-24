@@ -2,8 +2,23 @@
 
 echo "Please enter Starting Number\n";
 $low = trim(fgets(STDIN));
+
+if (is_numeric($low)){
+		$low = $low;
+}else{
+	echo "Please enter Numeric Value\n";
+	$low = trim(fgets(STDIN));
+}
+
 echo "Please enter Ending Number\n";
 $high = trim(fgets(STDIN));
+
+if (is_numeric($high)){
+		$high = $high;
+}else{
+	echo "Please enter Numeric Value\n";
+	$high = trim(fgets(STDIN));
+}
 
 echo "Would you like to set Increment Value\n";
 $yes_or_no = trim(fgets(STDIN));
