@@ -1,20 +1,18 @@
 <?php
-$low = 0;
-$high = 100;
 
-for($low = 1; $low <= 100; $low++){
+for($i = 1; $i <= 100; $i++){
+
+	$divisibleBy3 = $i % 3 == 0;
+	$divisibleBy5 = $i % 5 == 0;
 
 	// reminder set each value compareable to 0
-	if((($low % 5 == 0) && ($low % 3 == 0))) {
+	if($divisibleBy3 && $divisibleBy5) {
 		echo "FizzBuzz\n";
-	}
-	elseif(0 == $low % 3){
+	}elseif($divisibleBy3){
 		echo "Fizz\n";
-	}
-	elseif(0 == $low % 5){
+	}elseif($divisibleBy5){
 		echo "Buzz\n";	
-	}
-	else{
-		echo "$low\n";
+	}else{
+		echo "$i\n";
 	}
 }
