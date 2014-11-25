@@ -3,41 +3,53 @@
 $books = array(
     'The Hobbit' => array(
         'published' => 1937,
-        'author' => 'J. R. R. Tolkien',
-        'pages' => 310
+        'pages' => 310,
+        'author' => array(
+            'first' => 'J.',
+            'middle' => 'R. R.',
+            'last' => 'Tolkien'
+        )
     ),
     'Game of Thrones' => array(
         'published' => 1996,
-        'author' => 'George R. R. Martin',
-        'pages' => 835
+        'pages' => 835,
+        'author' => array(
+            'first' => 'George',
+            'middle'=> 'R. R.',
+            'last' => 'Martin'
+        )
     ),
     'The Catcher in the Rye' => array(
         'published' => 1951,
-        'author' => 'J. D. Salinger',
-        'pages' => 220
+        'pages' => 220,
+        'author' => array(
+            'first' => 'J. D.',
+            'last' => 'Salinger'
+        )
     ),
     'A Tale of Two Cities' => array(
         'published' => 1859,
-        'author' => 'Charles Dickens',
-        'pages' => 544
+        'pages' => 544,
+        'author' => array(
+            'first' => 'Charles',
+            'last' => 'Dickens'
+        )
     )
 );
 
 
-foreach ($books as $title => $book){	
-	
-	// echo out year
-	// echo "$book[published]";
+foreach ($books as $title => $book){
+    echo "Title: $title" . PHP_EOL;
+    echo "Published: {$book['published']}" . PHP_EOL;
+    echo "Pages: {$book['pages']}" . PHP_EOL;
 
-	if ($book['published'] > 1950) {
+    if (is_array($book)){
+            echo "Author: {$book['author']['first']} ";
+            echo "{$book['author']['last']} " . PHP_EOL;
+    }else{
+            echo "Author: {$book['author']['first']} ";
+            echo "{$book['author']['middle']} ";
+            echo "{$book['author']['last']} " . PHP_EOL;
 
-		echo "$title\n";
-
-
-		foreach ($book as $key => $value) {
-			echo "$key - $value\n";
-		}
-	}
-
+    }
 }
-
