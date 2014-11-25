@@ -4,8 +4,14 @@ $things = array('Sgt. Pepper', "11", null, array(1,2,3), 3.14, "12 + 7", false, 
 
 foreach($things as $value){
 	if(is_array($value)){
-		echo "Array\n";
-	}else{
+		
+		foreach($value as $value){
+			echo "$value";
+		}
+
+		echo "\n";
+	
+	} else {
 	echo "$value\n";
 	}
 
