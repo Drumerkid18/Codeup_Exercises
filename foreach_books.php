@@ -6,7 +6,7 @@ $books = array(
         'pages' => 310,
         'author' => array(
             'first' => 'J.',
-            'middle' => 'R. R.',
+            'middle' => 'R. R. ',
             'last' => 'Tolkien'
         )
     ),
@@ -15,7 +15,7 @@ $books = array(
         'pages' => 835,
         'author' => array(
             'first' => 'George',
-            'middle'=> 'R. R.',
+            'middle'=> 'R. R. ',
             'last' => 'Martin'
         )
     ),
@@ -24,6 +24,7 @@ $books = array(
         'pages' => 220,
         'author' => array(
             'first' => 'J. D.',
+            'middle' => '',
             'last' => 'Salinger'
         )
     ),
@@ -32,6 +33,7 @@ $books = array(
         'pages' => 544,
         'author' => array(
             'first' => 'Charles',
+            'middle' => '',
             'last' => 'Dickens'
         )
     )
@@ -45,11 +47,8 @@ foreach ($books as $title => $book){
 
     if (is_array($book)){
             echo "Author: {$book['author']['first']} ";
-            echo "{$book['author']['last']} " . PHP_EOL;
-    }else{
-            echo "Author: {$book['author']['first']} ";
-            echo "{$book['author']['middle']} ";
-            echo "{$book['author']['last']} " . PHP_EOL;
+            echo "{$book['author']['middle']}";
+            echo "{$book['author']['last']}" . PHP_EOL;
 
     }
 }
