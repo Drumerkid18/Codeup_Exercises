@@ -4,6 +4,8 @@ $nothing = null;
 $something = '';
 $array = array(1, 2, 3);
 
+// unset($something);
+
 // Create a function that checks if a variable is set or empty, and display "$variable_name is SET|EMPTY"
 function set_or_empty($a){
 	if(isset($a)){
