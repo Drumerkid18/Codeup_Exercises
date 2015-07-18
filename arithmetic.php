@@ -6,11 +6,11 @@ function error($a, $b){
 	}elseif(!is_numeric($b)){
     	return "ERROR: $b is not a numeric value," . "\n" .  "Please enter a number\n";
 	}elseif($a == 0.0 && $b == 0.0){
-    		return "ERROR: neither \$a or \$b can be equal to 0" . "\n" . "Please enter a value greater than 0\n";
+    		return false . PHP_EOL;
     	}elseif($a == 0.0){	
-    		return "ERROR: \$a cannot be equal to 0" . "\n" . "Please enter a value greater than 0\n";    		
+    		return false . PHP_EOL;    		
     	}else{
-    		return "ERROR: \$b cannot be equal to 0" . "\n" . "Please enter a value greater than 0\n";    		
+    		return false . PHP_EOL;    		
     	}			
 }
 
